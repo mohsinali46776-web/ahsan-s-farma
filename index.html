@@ -1,0 +1,1118 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="dark">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FARMASUITS | Premium Veterinary Pharmaceuticals & Animal Healthcare Solutions</title>
+    
+    <!-- Meta Tags for SEO -->
+    <meta name="description" content="FARMASUITS delivers premium veterinary medicines, vaccines, feed additives, and animal healthcare products. Trusted partner for dairy, poultry, and livestock farms globally.">
+    <meta name="keywords" content="veterinary medicines, animal health, poultry vaccines, cattle feed additives, livestock pharmaceuticals, veterinary antibiotics, FARMASUITS">
+    <meta name="author" content="FARMASUITS">
+    <meta property="og:title" content="FARMASUITS | Premium Veterinary Healthcare Solutions">
+    <meta property="og:description" content="Delivering world-class veterinary medicines and animal healthcare products for healthier livestock and better farm productivity.">
+    <meta property="og:image" content="assets/images/logo.png">
+    <meta property="og:type" content="website">
+
+    <!-- Google Fonts: Poppins (Headings & Buttons) & Inter (Body) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Poppins:wght@500;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- FontAwesome for Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <!-- Leaflet JS for Interactive Vector Map (No API Key Required) -->
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" integrity="sha256-p4NxAoJBhIIN+hmNHrzRCf9tD/miZyoHS5obTRR9BMY=" crossorigin=""/>
+    <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js" integrity="sha256-20nQCchB9co0qIjJZRGuk2/Z9VM+kNiyxNV1lvTlZBo=" crossorigin=""></script>
+
+    <!-- Custom Stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <!-- Animated Loading Screen -->
+    <div id="loader" class="loader-wrapper">
+        <div class="loader-content">
+            <div class="loader-logo">
+                <span class="logo-accent">FARMA</span>SUITS
+            </div>
+            <div class="loader-bar">
+                <div class="loader-progress"></div>
+            </div>
+            <p class="loader-text">Loading Veterinary Excellence...</p>
+        </div>
+    </div>
+
+    <!-- Scroll Progress Bar -->
+    <div class="scroll-progress-container">
+        <div class="scroll-progress-bar" id="scrollProgress"></div>
+    </div>
+
+    <!-- Sticky Navigation Bar -->
+    <header class="main-header" id="mainHeader">
+        <div class="container nav-container">
+            <!-- Logo -->
+            <a href="#home" class="logo" id="headerLogo">
+                <img src="assets/images/logo.png" alt="FARMASUITS Logo" class="logo-img">
+                <span class="logo-text"><span class="logo-blue">FARMA</span><span class="logo-green">SUITS</span></span>
+            </a>
+
+            <!-- Navigation Links -->
+            <nav class="nav-menu" id="navMenu">
+                <ul>
+                    <li><a href="#home" class="nav-link active">Home</a></li>
+                    <li><a href="#about" class="nav-link">About</a></li>
+                    <li><a href="#categories" class="nav-link">Categories</a></li>
+                    <li><a href="#featured" class="nav-link">Products</a></li>
+                    <li><a href="#industries" class="nav-link">Industries</a></li>
+                    <li><a href="#gallery" class="nav-link">Gallery</a></li>
+                    <li><a href="#blog" class="nav-link">Blog</a></li>
+                    <li><a href="#contact" class="nav-link">Contact</a></li>
+                </ul>
+            </nav>
+
+            <!-- Right-side Actions -->
+            <div class="nav-actions">
+                <!-- Language Selector -->
+                <div class="lang-selector">
+                    <button class="lang-btn" id="langBtn">
+                        <i class="fa-solid fa-globe"></i> <span>EN</span> <i class="fa-solid fa-chevron-down"></i>
+                    </button>
+                    <ul class="lang-dropdown" id="langDropdown">
+                        <li><a href="#" data-lang="en">English</a></li>
+                        <li><a href="#" data-lang="es">Español</a></li>
+                        <li><a href="#" data-lang="ar">العربية</a></li>
+                    </ul>
+                </div>
+
+                <!-- Theme Toggle -->
+                <button class="theme-toggle" id="themeToggle" aria-label="Toggle Dark/Light Mode">
+                    <i class="fa-solid fa-sun" id="sunIcon"></i>
+                    <i class="fa-solid fa-moon" id="moonIcon"></i>
+                </button>
+
+                <!-- Action Buttons -->
+                <a href="tel:+923006142273" class="btn btn-nav-phone" title="Call Us Now">
+                    <i class="fa-solid fa-phone"></i>
+                </a>
+                <a href="https://wa.me/923006142273" target="_blank" class="btn btn-nav-whatsapp" title="WhatsApp Chat">
+                    <i class="fa-brands fa-whatsapp"></i> <span>WhatsApp</span>
+                </a>
+
+                <!-- Mobile Menu Button -->
+                <button class="mobile-nav-toggle" id="mobileNavToggle" aria-label="Toggle Navigation">
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                    <span class="bar"></span>
+                </button>
+            </div>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section">
+        <!-- Background Video (High quality loop overlay) -->
+        <div class="hero-video-container">
+            <video class="hero-video" autoplay muted loop playsinline poster="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?auto=format&fit=crop&q=80&w=1920">
+                <source src="https://player.vimeo.com/external/371433846.sd.mp4?s=236da2f3c054273b1e2bdad2947115858cfd36a9&profile_id=139&oauth2_token_id=57447761" type="video/mp4">
+            </video>
+            <div class="hero-overlay"></div>
+        </div>
+
+        <!-- Floating Particles & Glowing Circles -->
+        <div class="hero-particles" id="heroParticles"></div>
+        <div class="glow-circle glow-circle-1"></div>
+        <div class="glow-circle glow-circle-2"></div>
+
+        <div class="container hero-content text-center">
+            <div class="badge fade-in-up">Trusted Veterinary Healthcare Solutions</div>
+            <h1 class="hero-title fade-in-up delay-1">
+                Delivering Premium Medicines for <br><span class="text-gradient">Healthier Livestock</span> & Productivity
+            </h1>
+            <p class="hero-subtitle fade-in-up delay-2">
+                FARMASUITS is a global leader in veterinary pharmaceuticals, poultry formulations, and feed supplements, inspiring trust through clinical excellence.
+            </p>
+            <div class="hero-buttons fade-in-up delay-3">
+                <a href="#categories" class="btn btn-primary btn-glow">
+                    <span>Explore Products</span> <i class="fa-solid fa-arrow-right"></i>
+                </a>
+                <a href="#contact" class="btn btn-outline">
+                    <span>Contact Sales</span> <i class="fa-solid fa-envelope"></i>
+                </a>
+            </div>
+        </div>
+
+        <!-- Sticky CTA Strip at the bottom of Hero -->
+        <div class="sticky-cta-strip">
+            <div class="container cta-strip-container">
+                <p class="cta-strip-text">
+                    <span class="pulse-dot"></span> Authorized distributor for global top-tier veterinary brands.
+                </p>
+                <a href="#contact" class="cta-strip-link">Inquire for Dealership <i class="fa-solid fa-chevron-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Statistics Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="stats-grid" id="statsGrid">
+                <!-- Counter 1 -->
+                <div class="stat-card glass-card scroll-reveal">
+                    <div class="stat-icon"><i class="fa-solid fa-users"></i></div>
+                    <div class="stat-number" data-target="600">0</div>
+                    <div class="stat-label">Happy Farms & Clients</div>
+                </div>
+                <!-- Counter 2 -->
+                <div class="stat-card glass-card scroll-reveal delay-1">
+                    <div class="stat-icon"><i class="fa-solid fa-capsules"></i></div>
+                    <div class="stat-number" data-target="150">0</div>
+                    <div class="stat-label">Veterinary Formulations</div>
+                </div>
+                <!-- Counter 3 -->
+                <div class="stat-card glass-card scroll-reveal delay-2">
+                    <div class="stat-icon"><i class="fa-solid fa-handshake"></i></div>
+                    <div class="stat-number" data-target="25">0</div>
+                    <div class="stat-label">Business Partners</div>
+                </div>
+                <!-- Counter 4 -->
+                <div class="stat-card glass-card scroll-reveal delay-3">
+                    <div class="stat-icon"><i class="fa-solid fa-award"></i></div>
+                    <div class="stat-number" data-target="15">0</div>
+                    <div class="stat-label">Years of Innovation</div>
+                </div>
+                <!-- Counter 5 -->
+                <div class="stat-card glass-card scroll-reveal delay-4">
+                    <div class="stat-icon"><i class="fa-solid fa-shield-halved"></i></div>
+                    <div class="stat-number" data-target="99">0</div>
+                    <div class="stat-label">Satisfaction Rate (%)</div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- AI Product Hub: Search and Product Categories -->
+    <section id="categories" class="categories-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Product Catalog</span>
+                <h2 class="section-title">Explore by Therapeutic Class</h2>
+                <p class="section-desc">Search and filter our premium portfolio of veterinary medicines formulated for high bioavailability and efficacy.</p>
+            </div>
+
+            <!-- AI Search Bar & Quick Filters -->
+            <div class="search-filter-wrapper glass-card scroll-reveal">
+                <div class="search-box">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="aiSearchBar" placeholder="AI-powered search (e.g. Tylosin, Antibiotic, Vaccines, poultry...)" aria-label="Search Products">
+                    <button class="search-clear-btn" id="searchClearBtn"><i class="fa-solid fa-xmark"></i></button>
+                </div>
+                <div class="category-tabs-container">
+                    <div class="category-tabs" id="categoryTabs">
+                        <button class="tab-btn active" data-filter="all">All Categories</button>
+                        <button class="tab-btn" data-filter="Antibiotics">Antibiotics</button>
+                        <button class="tab-btn" data-filter="Vaccines">Vaccines</button>
+                        <button class="tab-btn" data-filter="Dewormers">Dewormers</button>
+                        <button class="tab-btn" data-filter="Feed Additives">Feed Additives</button>
+                        <button class="tab-btn" data-filter="Nutritional Supplements">Nutritional</button>
+                        <button class="tab-btn" data-filter="Minerals">Minerals</button>
+                        <button class="tab-btn" data-filter="Pet Medicines">Pet Care</button>
+                        <button class="tab-btn" data-filter="Livestock Products">Livestock</button>
+                        <button class="tab-btn" data-filter="Poultry Products">Poultry</button>
+                        <button class="tab-btn" data-filter="Injectables">Injectables</button>
+                        <button class="tab-btn" data-filter="Oral Solutions">Oral Solutions</button>
+                        <button class="tab-btn" data-filter="Disinfectants">Disinfectants</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Dynamic Product Grid -->
+            <div class="products-grid" id="productsGrid">
+                <!-- Products will be generated dynamically in JavaScript -->
+            </div>
+            
+            <!-- No results found element -->
+            <div class="no-results" id="noResults">
+                <i class="fa-solid fa-box-open"></i>
+                <h3>No formulations match your search criteria</h3>
+                <p>Try searching for a different therapeutic name or category, or contact our pharmacologist for custom queries.</p>
+                <a href="#contact" class="btn btn-primary btn-sm">Request Formulation Detail</a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Featured Products Showcase (Carousel) -->
+    <section id="featured" class="featured-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Flagship Offerings</span>
+                <h2 class="section-title">Featured Animal Healthcare Brands</h2>
+                <p class="section-desc">Our highly effective flagship brands are trusted by dairy farms, veterinarians, and distributors nationwide.</p>
+            </div>
+
+            <!-- Carousel Wrapper -->
+            <div class="carousel-outer scroll-reveal">
+                <button class="carousel-control prev" id="carouselPrevBtn" aria-label="Previous Slide">
+                    <i class="fa-solid fa-chevron-left"></i>
+                </button>
+                
+                <div class="carousel-viewport" id="carouselViewport">
+                    <div class="carousel-track" id="carouselTrack">
+                        <!-- Featured Slide 1 -->
+                        <div class="carousel-slide">
+                            <div class="featured-card glass-card">
+                                <div class="featured-badge">Antibiotic</div>
+                                <div class="featured-img-container">
+                                    <!-- Dynamic clean 3D product package via CSS -->
+                                    <div class="pharm-box-3d float-anim">
+                                        <div class="box-face face-front">
+                                            <div class="box-brand">FARMA-TYLOSIN</div>
+                                            <div class="box-volume">100ml Injectable</div>
+                                            <div class="box-cross"><i class="fa-solid fa-heart-pulse"></i></div>
+                                        </div>
+                                        <div class="box-face face-top"></div>
+                                        <div class="box-face face-side"></div>
+                                    </div>
+                                </div>
+                                <div class="featured-info">
+                                    <h3 class="featured-name">Farma-Tylosin 20%</h3>
+                                    <p class="featured-use"><strong>Primary Uses:</strong> Effective treatment of respiratory infections, pneumonia, and foot-rot in cows, buffaloes, and goats.</p>
+                                    <ul class="featured-benefits">
+                                        <li><i class="fa-solid fa-check text-green"></i> Rapid absorption & high bioavailability</li>
+                                        <li><i class="fa-solid fa-check text-green"></i> Clean recovery within 48 hours</li>
+                                        <li><i class="fa-solid fa-check text-green"></i> Premium medical-grade quality</li>
+                                    </ul>
+                                    <div class="featured-actions">
+                                        <button class="btn btn-primary btn-sm inquiry-btn" data-product="Farma-Tylosin 20%">Inquire Now</button>
+                                        <a href="assets/docs/FARMASUITS_Product_Brochure.pdf" download class="btn btn-outline-sm"><i class="fa-solid fa-file-arrow-down"></i> Brochure</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Featured Slide 2 -->
+                        <div class="carousel-slide">
+                            <div class="featured-card glass-card">
+                                <div class="featured-badge bg-green">Nutritional</div>
+                                <div class="featured-img-container">
+                                    <div class="pharm-box-3d box-gold float-anim">
+                                        <div class="box-face face-front">
+                                            <div class="box-brand">VITASUIT FORTE</div>
+                                            <div class="box-volume">1 Litre Oral Liquid</div>
+                                            <div class="box-cross"><i class="fa-solid fa-certificate"></i></div>
+                                        </div>
+                                        <div class="box-face face-top"></div>
+                                        <div class="box-face face-side"></div>
+                                    </div>
+                                </div>
+                                <div class="featured-info">
+                                    <h3 class="featured-name">Vitasuit Forte</h3>
+                                    <p class="featured-use"><strong>Primary Uses:</strong> Promotes growth, high milk production yield, and robust immunity in dairy cows and poultry.</p>
+                                    <ul class="featured-benefits">
+                                        <li><i class="fa-solid fa-check text-green"></i> Fortified with vitamins A, D3, E & H</li>
+                                        <li><i class="fa-solid fa-check text-green"></i> Reduces calving stress instantly</li>
+                                        <li><i class="fa-solid fa-check text-green"></i> Boosts feed conversion ratio (FCR)</li>
+                                    </ul>
+                                    <div class="featured-actions">
+                                        <button class="btn btn-primary btn-sm inquiry-btn" data-product="Vitasuit Forte">Inquire Now</button>
+                                        <a href="assets/docs/FARMASUITS_Product_Brochure.pdf" download class="btn btn-outline-sm"><i class="fa-solid fa-file-arrow-down"></i> Brochure</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Featured Slide 3 -->
+                        <div class="carousel-slide">
+                            <div class="featured-card glass-card">
+                                <div class="featured-badge">Dewormer</div>
+                                <div class="featured-img-container">
+                                    <div class="pharm-box-3d box-teal float-anim">
+                                        <div class="box-face face-front">
+                                            <div class="box-brand">SUIT-DEWORM</div>
+                                            <div class="box-volume">500ml Suspension</div>
+                                            <div class="box-cross"><i class="fa-solid fa-shield-virus"></i></div>
+                                        </div>
+                                        <div class="box-face face-top"></div>
+                                        <div class="box-face face-side"></div>
+                                    </div>
+                                </div>
+                                <div class="featured-info">
+                                    <h3 class="featured-name">Suit-Deworm Suspension</h3>
+                                    <p class="featured-use"><strong>Primary Uses:</strong> Broad-spectrum anthelmintic suspension for eliminating liver flukes, lungworms, and gastrointestinal roundworms.</p>
+                                    <ul class="featured-benefits">
+                                        <li><i class="fa-solid fa-check text-green"></i> Highly effective on mature & immature flukes</li>
+                                        <li><i class="fa-solid fa-check text-green"></i> Safe for pregnant livestock</li>
+                                        <li><i class="fa-solid fa-check text-green"></i> Superior palatability</li>
+                                    </ul>
+                                    <div class="featured-actions">
+                                        <button class="btn btn-primary btn-sm inquiry-btn" data-product="Suit-Deworm Suspension">Inquire Now</button>
+                                        <a href="assets/docs/FARMASUITS_Product_Brochure.pdf" download class="btn btn-outline-sm"><i class="fa-solid fa-file-arrow-down"></i> Brochure</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Featured Slide 4 -->
+                        <div class="carousel-slide">
+                            <div class="featured-card glass-card">
+                                <div class="featured-badge bg-green">Vaccine</div>
+                                <div class="featured-img-container">
+                                    <div class="pharm-box-3d box-red float-anim">
+                                        <div class="box-face face-front">
+                                            <div class="box-brand">ND-LASOTA VACC</div>
+                                            <div class="box-volume">1000 Doses Vial</div>
+                                            <div class="box-cross"><i class="fa-solid fa-virus-slash"></i></div>
+                                        </div>
+                                        <div class="box-face face-top"></div>
+                                        <div class="box-face face-side"></div>
+                                    </div>
+                                </div>
+                                <div class="featured-info">
+                                    <h3 class="featured-name">Suit-Vacc ND LaSota</h3>
+                                    <p class="featured-use"><strong>Primary Uses:</strong> Essential live vaccine for immunizing poultry flocks against Newcastle Disease (RaniKhet).</p>
+                                    <ul class="featured-benefits">
+                                        <li><i class="fa-solid fa-check text-green"></i> High antigen titer value</li>
+                                        <li><i class="fa-solid fa-check text-green"></i> Easy ocular or drinking water application</li>
+                                        <li><i class="fa-solid fa-check text-green"></i> Temperature-stabilized premium formulation</li>
+                                    </ul>
+                                    <div class="featured-actions">
+                                        <button class="btn btn-primary btn-sm inquiry-btn" data-product="Suit-Vacc ND LaSota">Inquire Now</button>
+                                        <a href="assets/docs/FARMASUITS_Product_Brochure.pdf" download class="btn btn-outline-sm"><i class="fa-solid fa-file-arrow-down"></i> Brochure</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <button class="carousel-control next" id="carouselNextBtn" aria-label="Next Slide">
+                    <i class="fa-solid fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+    </section>
+
+    <!-- About Section -->
+    <section id="about" class="about-section">
+        <div class="container">
+            <div class="grid grid-2-col">
+                <!-- Left: Corporate Profile -->
+                <div class="about-text scroll-reveal">
+                    <span class="section-subtitle">Establishment & Legacy</span>
+                    <h2 class="section-title">Leading Veterinary Medicine Production with Clinical Integrity</h2>
+                    <p class="about-intro">For over 15 years, FARMASUITS has specialized in manufacturing high-quality, scientifically sound animal health products designed to enhance livestock productivity and poultry farm yield.</p>
+                    
+                    <div class="story-tabs">
+                        <div class="story-tab-headers">
+                            <button class="story-tab-btn active" data-tab="mission">Mission</button>
+                            <button class="story-tab-btn" data-tab="vision">Vision</button>
+                            <button class="story-tab-btn" data-tab="values">Values</button>
+                        </div>
+                        <div class="story-tab-content active" id="tab-mission">
+                            <p>To design and manufacture superior quality animal healthcare products that elevate veterinary therapy, boost dairy and poultry farm efficiency, and ensure farm profitability through safe, highly biosuitable ingredients.</p>
+                        </div>
+                        <div class="story-tab-content" id="tab-vision">
+                            <p>To become a leading global benchmark in animal health, acknowledged for our robust clinical development, premium quality controls, and sustainable distribution reach across agricultural continents.</p>
+                        </div>
+                        <div class="story-tab-content" id="tab-values">
+                            <p>Integrity, Scientific Excellence, Farm Safety, Superior Customer Focus, Sustainable Agribusiness, and Unwavering Commitment to Veterinary Welfare.</p>
+                        </div>
+                    </div>
+
+                    <!-- Modern Experience timeline widget -->
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2011 - Founding & Inception</h4>
+                                <p>Launched specialized premium disinfectants and basic mineral formulations for livestock.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2018 - State-of-the-Art Laboratory</h4>
+                                <p>Established full-scale clinical grade production for liquid suspension and injectable medicines.</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-dot"></div>
+                            <div class="timeline-content">
+                                <h4>2026 - Global Distribution Hub</h4>
+                                <p>Reaching global livestock farms through a robust corporate network of veterinary partners.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Premium Interactive Visual Graphic -->
+                <div class="about-visual scroll-reveal delay-2">
+                    <div class="image-frame glass-card">
+                        <!-- Loaded Generated image (Veterinary doctor checking cattle) -->
+                        <img src="assets/images/about_illustration.png" alt="FARMASUITS Veterinary Care" class="about-img">
+                        <div class="floating-overlay-card card-top glass-card">
+                            <div class="card-icon text-green"><i class="fa-solid fa-flask-vial"></i></div>
+                            <div>
+                                <h5>GMP Certified</h5>
+                                <p>Strict quality assurance</p>
+                            </div>
+                        </div>
+                        <div class="floating-overlay-card card-bottom glass-card">
+                            <div class="card-icon text-blue"><i class="fa-solid fa-dna"></i></div>
+                            <div>
+                                <h5>R&D Driven</h5>
+                                <p>Advanced bio-formulas</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Why Choose FARMASUITS Section -->
+    <section class="why-choose-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle font-semibold">Our Strategic Advantages</span>
+                <h2 class="section-title">Why Professionals Choose FARMASUITS</h2>
+                <p class="section-desc">Our adherence to high compliance guidelines and robust shipping networks separates us from retail pharmaceutical suppliers.</p>
+            </div>
+
+            <div class="grid grid-3-col">
+                <!-- Card 1 -->
+                <div class="why-card glass-card scroll-reveal">
+                    <div class="why-icon"><i class="fa-solid fa-clipboard-check"></i></div>
+                    <h3>Quality Assured Products</h3>
+                    <p>Every veterinary dose is manufactured in GMP-compliant facilities and tested under strict HPLC quality control protocols.</p>
+                    <div class="glow-border-layer"></div>
+                </div>
+                <!-- Card 2 -->
+                <div class="why-card glass-card scroll-reveal delay-1">
+                    <div class="why-icon"><i class="fa-solid fa-user-doctor"></i></div>
+                    <h3>Professional Guidance</h3>
+                    <p>Our in-house veterinary specialists assist dairy farms, poultry managers, and veterinary practitioners in optimizing therapy cycles.</p>
+                    <div class="glow-border-layer"></div>
+                </div>
+                <!-- Card 3 -->
+                <div class="why-card glass-card scroll-reveal delay-2">
+                    <div class="why-icon"><i class="fa-solid fa-truck-fast"></i></div>
+                    <h3>Reliable Distribution</h3>
+                    <p>A fully integrated supply chain ensures cold-chain medicines arrive safely at clinical points and distributors without potency loss.</p>
+                    <div class="glow-border-layer"></div>
+                </div>
+                <!-- Card 4 -->
+                <div class="why-card glass-card scroll-reveal">
+                    <div class="why-icon"><i class="fa-solid fa-headset"></i></div>
+                    <h3>Fast Customer Support</h3>
+                    <p>Get answers within hours from clinical professionals who understand farm metrics, dosing parameters, and therapeutic applications.</p>
+                    <div class="glow-border-layer"></div>
+                </div>
+                <!-- Card 5 -->
+                <div class="why-card glass-card scroll-reveal delay-1">
+                    <div class="why-icon"><i class="fa-solid fa-tags"></i></div>
+                    <h3>Competitive Pricing</h3>
+                    <p>Direct B2B manufacturing models allow us to supply distributors and industrial livestock managers with highly competitive pricing structures.</p>
+                    <div class="glow-border-layer"></div>
+                </div>
+                <!-- Card 6 -->
+                <div class="why-card glass-card scroll-reveal delay-2">
+                    <div class="why-icon"><i class="fa-solid fa-ranking-star"></i></div>
+                    <h3>Trusted Brands</h3>
+                    <p>Used by top-tier feed mills, government dairy cooperatives, veterinary universities, and international veterinary hospitals.</p>
+                    <div class="glow-border-layer"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Industries We Serve Section -->
+    <section id="industries" class="industries-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Target Sectors</span>
+                <h2 class="section-title">Sectors Empowered by FARMASUITS</h2>
+                <p class="section-desc">We tailor formulation concentrations and packaging sizes to match the specific needs of multiple veterinary verticals.</p>
+            </div>
+
+            <div class="grid grid-4-col">
+                <!-- Card 1 -->
+                <div class="industry-card scroll-reveal" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1570042225831-d98fa7577f1e?auto=format&fit=crop&q=80&w=600');">
+                    <div class="industry-icon"><i class="fa-solid fa-cow"></i></div>
+                    <h3>Dairy Farms</h3>
+                    <p>Enhance milk yields, prevent clinical mastitis, and optimize postpartum cattle health.</p>
+                </div>
+                <!-- Card 2 -->
+                <div class="industry-card scroll-reveal delay-1" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=600');">
+                    <div class="industry-icon"><i class="fa-solid fa-egg"></i></div>
+                    <h3>Poultry Farms</h3>
+                    <p>Vitamins, vaccines, and coccidiostats for high egg laying rates and meat growth.</p>
+                </div>
+                <!-- Card 3 -->
+                <div class="industry-card scroll-reveal delay-2" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1484557985045-edf25e08da73?auto=format&fit=crop&q=80&w=600');">
+                    <div class="industry-icon"><i class="fa-solid fa-horse"></i></div>
+                    <h3>Livestock Farms</h3>
+                    <p>Broad-spectrum dewormers, pain relievers, and metabolic boosters for sheep and goats.</p>
+                </div>
+                <!-- Card 4 -->
+                <div class="industry-card scroll-reveal delay-3" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1584132967334-10e028bd69f7?auto=format&fit=crop&q=80&w=600');">
+                    <div class="industry-icon"><i class="fa-solid fa-stethoscope"></i></div>
+                    <h3>Veterinary Clinics</h3>
+                    <p>Specialty surgical disinfectants, diagnostic-grade tools, and custom canine/feline drugs.</p>
+                </div>
+                <!-- Card 5 -->
+                <div class="industry-card scroll-reveal" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1532938911079-1b06ac7ceec7?auto=format&fit=crop&q=80&w=600');">
+                    <div class="industry-icon"><i class="fa-solid fa-square-h"></i></div>
+                    <h3>Animal Hospitals</h3>
+                    <p>Bulk sterile injectables, critical life-support drugs, and clinical anesthesia.</p>
+                </div>
+                <!-- Card 6 -->
+                <div class="industry-card scroll-reveal delay-1" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1605001011156-cbf0b0f67a51?auto=format&fit=crop&q=80&w=600');">
+                    <div class="industry-icon"><i class="fa-solid fa-wheat-awn"></i></div>
+                    <h3>Feed Mills</h3>
+                    <p>Essential organic trace minerals and toxin binders for premium feed compounding.</p>
+                </div>
+                <!-- Card 7 -->
+                <div class="industry-card scroll-reveal delay-2" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=600');">
+                    <div class="industry-icon"><i class="fa-solid fa-paw"></i></div>
+                    <h3>Animal Traders</h3>
+                    <p>Rapid wellness formulations and vaccines to safely clear customs quarantine.</p>
+                </div>
+                <!-- Card 8 -->
+                <div class="industry-card scroll-reveal delay-3" style="background-image: linear-gradient(rgba(15, 23, 42, 0.75), rgba(15, 23, 42, 0.95)), url('https://images.unsplash.com/photo-1578575437130-527eed3abbec?auto=format&fit=crop&q=80&w=600');">
+                    <div class="industry-icon"><i class="fa-solid fa-ship"></i></div>
+                    <h3>Export Companies</h3>
+                    <p>Global regulatory compliant formulations for international animal shipping hubs.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Gallery Section (Masonry) -->
+    <section id="gallery" class="gallery-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Visual Overview</span>
+                <h2 class="section-title">FARMASUITS in Action</h2>
+                <p class="section-desc">Snapshots of our GMP labs, high-tech manufacturing, corporate veterinary training, and dairy farm visits.</p>
+            </div>
+
+            <!-- Gallery Filter Buttons -->
+            <div class="gallery-filters" id="galleryFilters">
+                <button class="filter-btn active" data-group="all">All Photos</button>
+                <button class="filter-btn" data-group="visits">Farm Visits</button>
+                <button class="filter-btn" data-group="products">Products</button>
+                <button class="filter-btn" data-group="clinics">Clinics & Seminars</button>
+                <button class="filter-btn" data-group="doctors">Veterinarians</button>
+                <button class="filter-btn" data-group="customers">Happy Customers</button>
+            </div>
+
+            <!-- Masonry Grid -->
+            <div class="gallery-masonry" id="galleryGrid">
+                <!-- Item 1 -->
+                <div class="gallery-item" data-group="visits">
+                    <img src="https://images.unsplash.com/photo-1500937386664-56d1dfef3854?auto=format&fit=crop&q=80&w=800" alt="Veterinary Farm Visit Checking Cows">
+                    <div class="gallery-hover">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Cattle Farm Health Audit</span>
+                    </div>
+                </div>
+                <!-- Item 2 -->
+                <div class="gallery-item" data-group="products">
+                    <img src="https://images.unsplash.com/photo-1584308666744-24d5c474f2ae?auto=format&fit=crop&q=80&w=800" alt="Medical Formulation Ampoules">
+                    <div class="gallery-hover">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>High-bioavailability Ampoules</span>
+                    </div>
+                </div>
+                <!-- Item 3 -->
+                <div class="gallery-item" data-group="clinics">
+                    <img src="https://images.unsplash.com/photo-1540575467063-178a50c2df87?auto=format&fit=crop&q=80&w=800" alt="Veterinary Seminar Conference">
+                    <div class="gallery-hover">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>FARMASUITS Summit 2026</span>
+                    </div>
+                </div>
+                <!-- Item 4 -->
+                <div class="gallery-item" data-group="doctors">
+                    <img src="https://images.unsplash.com/photo-1576091160550-2173dba999ef?auto=format&fit=crop&q=80&w=800" alt="Veterinarian Injecting Sheep">
+                    <div class="gallery-hover">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Veterinary Diagnostics Guidance</span>
+                    </div>
+                </div>
+                <!-- Item 5 -->
+                <div class="gallery-item" data-group="customers">
+                    <img src="https://images.unsplash.com/photo-1595273670150-db0c3c3e74a1?auto=format&fit=crop&q=80&w=800" alt="Farmer Smiling with Cows">
+                    <div class="gallery-hover">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Dairy Farmer Productivity Success</span>
+                    </div>
+                </div>
+                <!-- Item 6 -->
+                <div class="gallery-item" data-group="products">
+                    <img src="https://images.unsplash.com/photo-1607619056574-7b8d3ee536b2?auto=format&fit=crop&q=80&w=800" alt="Antibiotic Formulation Box Mockup">
+                    <div class="gallery-hover">
+                        <i class="fa-solid fa-expand"></i>
+                        <span>Veterinary Injectable Stockpile</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section class="testimonials-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Client Feedback</span>
+                <h2 class="section-title">Verified Veterinary Endorsements</h2>
+                <p class="section-desc">Read reviews from livestock managers, leading veterinarians, and industrial feed coordinators.</p>
+            </div>
+
+            <!-- Testimonial Slider Wrapper -->
+            <div class="testimonial-slider-container">
+                <div class="testimonial-track" id="testimonialTrack">
+                    <!-- Card 1 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="review-text">"Using Vitasuit Forte significantly boosted our herd's daily milk yield by 15% within three weeks. Their metabolic injectables are the most effective in the commercial market today."</p>
+                        <div class="customer-info">
+                            <div class="customer-avatar"><i class="fa-solid fa-user-tie"></i></div>
+                            <div>
+                                <h4>Dr. Faisal Mahmood</h4>
+                                <span class="customer-company">Chief Veterinarian, GreenMeadows Dairy Farm</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 2 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="review-text">"As poultry distributors, maintaining pharmaceutical potency is vital. FARMASUITS cold-chain vaccine delivery ensures zero loss. The Newcastle disease vaccines have protected over 200k birds in our loop."</p>
+                        <div class="customer-info">
+                            <div class="customer-avatar"><i class="fa-solid fa-user-shield"></i></div>
+                            <div>
+                                <h4>Engr. Tariq Hassan</h4>
+                                <span class="customer-company">Managing Director, BioFlock Poultry Traders</span>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Card 3 -->
+                    <div class="testimonial-card glass-card">
+                        <div class="stars"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                        <p class="review-text">"Their broad-spectrum dewormers are highly palatable and easy to dose. We have noticed immediate weight stabilization and zero parasite load in our sheep exports."</p>
+                        <div class="customer-info">
+                            <div class="customer-avatar"><i class="fa-solid fa-hospital-user"></i></div>
+                            <div>
+                                <h4>Dr. Amara Khalid</h4>
+                                <span class="customer-company">Lead Practitioner, SafeCare Veterinary Clinic</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Dot Navigation -->
+                <div class="testimonial-dots" id="testimonialDots">
+                    <!-- Dots generated in JS -->
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Partners Section (Logos Slider) -->
+    <section class="partners-section">
+        <div class="container">
+            <h4 class="partner-title">Authorized To Represent Leading Global Brands</h4>
+            <div class="logo-slider-container">
+                <div class="logo-slider-track">
+                    <!-- Duplicate items for seamless continuous looping -->
+                    <div class="logo-item"><span class="partner-logo-mock">Zoetis</span></div>
+                    <div class="logo-item"><span class="partner-logo-mock">Virbac</span></div>
+                    <div class="logo-item"><span class="partner-logo-mock">Ceva</span></div>
+                    <div class="logo-item"><span class="partner-logo-mock">Elanco</span></div>
+                    <div class="logo-item"><span class="partner-logo-mock">Boehringer</span></div>
+                    <div class="logo-item"><span class="partner-logo-mock">Vetoquinol</span></div>
+                    <!-- Loop items -->
+                    <div class="logo-item"><span class="partner-logo-mock">Zoetis</span></div>
+                    <div class="logo-item"><span class="partner-logo-mock">Virbac</span></div>
+                    <div class="logo-item"><span class="partner-logo-mock">Ceva</span></div>
+                    <div class="logo-item"><span class="partner-logo-mock">Elanco</span></div>
+                    <div class="logo-item"><span class="partner-logo-mock">Boehringer</span></div>
+                    <div class="logo-item"><span class="partner-logo-mock">Vetoquinol</span></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section -->
+    <section id="blog" class="blog-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Clinical Knowledge</span>
+                <h2 class="section-title">Veterinary Insights & Industry News</h2>
+                <p class="section-desc">Expert articles written by lead veterinary doctors on disease prevention, vaccination regimes, and farm yield optimization.</p>
+            </div>
+
+            <div class="grid grid-3-col">
+                <!-- Blog 1 -->
+                <article class="blog-card glass-card scroll-reveal">
+                    <div class="blog-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1599443015574-be5fe8a38395?auto=format&fit=crop&q=80&w=600" alt="Cattle Mastitis Prevention">
+                        <div class="blog-date"><i class="fa-regular fa-calendar"></i> June 20, 2026</div>
+                    </div>
+                    <div class="blog-body">
+                        <span class="blog-category">Animal Health Tips</span>
+                        <h3>Mastitis Prevention in Dairy Cattle: Effective Protocols</h3>
+                        <p>Learn how maintaining strict teat disinfection and administering intramammary infusions can safeguard milk yield.</p>
+                        <a href="#" class="blog-more-link"><span>Read Guidelines</span> <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog 2 -->
+                <article class="blog-card glass-card scroll-reveal delay-1">
+                    <div class="blog-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1543466835-00a7907e9de1?auto=format&fit=crop&q=80&w=600" alt="Dog Vaccination Schedule">
+                        <div class="blog-date"><i class="fa-regular fa-calendar"></i> June 12, 2026</div>
+                    </div>
+                    <div class="blog-body">
+                        <span class="blog-category">Vaccination Programs</span>
+                        <h3>Essential Poultry Vaccination Schedule for Farmers</h3>
+                        <p>A step-by-step breakdown of vaccines for Newcastle Disease (ND), Gumboro, and Bronchitis in broilers and layers.</p>
+                        <a href="#" class="blog-more-link"><span>Read Guidelines</span> <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </article>
+
+                <!-- Blog 3 -->
+                <article class="blog-card glass-card scroll-reveal delay-2">
+                    <div class="blog-img-wrapper">
+                        <img src="https://images.unsplash.com/photo-1516467508483-a7212febe31a?auto=format&fit=crop&q=80&w=600" alt="Livestock Feed Minerals">
+                        <div class="blog-date"><i class="fa-regular fa-calendar"></i> May 28, 2026</div>
+                    </div>
+                    <div class="blog-body">
+                        <span class="blog-category">Nutrition Guide</span>
+                        <h3>Optimizing Feed Conversion Ratios with Mineral Blocks</h3>
+                        <p>Discover the critical role of organic trace minerals (Zinc, Copper, Selenium) in increasing average daily livestock growth rates.</p>
+                        <a href="#" class="blog-more-link"><span>Read Guidelines</span> <i class="fa-solid fa-arrow-right-long"></i></a>
+                    </div>
+                </article>
+            </div>
+        </div>
+    </section>
+
+    <!-- Contact & Map Section -->
+    <section id="contact" class="contact-section">
+        <div class="container">
+            <div class="section-header text-center">
+                <span class="section-subtitle">Get In Touch</span>
+                <h2 class="section-title">Connect with Our B2B Sales Department</h2>
+                <p class="section-desc">Discuss bulk pharmaceutical distribution, dealership inquiries, or customized farm solutions.</p>
+            </div>
+
+            <div class="grid grid-2-col">
+                <!-- Left: Map & Contact Details -->
+                <div class="contact-details-wrapper scroll-reveal">
+                    <!-- Interactive Leaflet Map -->
+                    <div class="map-container glass-card" id="contactMap" style="height: 300px; width: 100%; border-radius: 12px; margin-bottom: 24px;"></div>
+                    
+                    <div class="contact-info-list">
+                        <!-- Card Details -->
+                        <div class="info-item glass-card">
+                            <div class="info-icon"><i class="fa-solid fa-phone-volume"></i></div>
+                            <div>
+                                <h4>Call Sales Direct</h4>
+                                <p><a href="tel:+923006142273">+92 300 6142273</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item glass-card">
+                            <div class="info-icon"><i class="fa-solid fa-envelope-open-text"></i></div>
+                            <div>
+                                <h4>Corporate Email</h4>
+                                <p><a href="mailto:ahsanali@gmail.com">ahsanali@gmail.com</a></p>
+                            </div>
+                        </div>
+
+                        <div class="info-item glass-card">
+                            <div class="info-icon"><i class="fa-solid fa-business-time"></i></div>
+                            <div>
+                                <h4>Business Hours</h4>
+                                <p>Monday – Saturday: 9:00 AM – 6:00 PM (GMT+5)</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Right: Form -->
+                <div class="contact-form-wrapper glass-card scroll-reveal delay-2">
+                    <h3>Send Commercial Inquiry</h3>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="formName">Full Name *</label>
+                                <input type="text" id="formName" name="name" required placeholder="John Doe">
+                            </div>
+                            <div class="form-group">
+                                <label for="formCompany">Company / Farm *</label>
+                                <input type="text" id="formCompany" name="company" required placeholder="Alpha Dairy Farms">
+                            </div>
+                        </div>
+                        <div class="form-group-row">
+                            <div class="form-group">
+                                <label for="formPhone">Phone Number *</label>
+                                <input type="tel" id="formPhone" name="phone" required placeholder="+92 300 1234567">
+                            </div>
+                            <div class="form-group">
+                                <label for="formEmail">Email Address *</label>
+                                <input type="email" id="formEmail" name="email" required placeholder="name@company.com">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label for="formSubject">Subject *</label>
+                            <select id="formSubject" name="subject" required>
+                                <option value="" disabled selected>Select Inquiry Type</option>
+                                <option value="dealership">Dealership / Distributorship Request</option>
+                                <option value="bulk">Bulk Pharmaceutical Inquiry</option>
+                                <option value="custom">Custom Farm Formulation Formulation</option>
+                                <option value="technical">Technical Veterinary Assistance</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="formMessage">Message *</label>
+                            <textarea id="formMessage" name="message" rows="5" required placeholder="Detail your batch size requirements or therapeutic classes..."></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-primary btn-block btn-glow">
+                            <span>Submit Secure Inquiry</span> <i class="fa-solid fa-paper-plane"></i>
+                        </button>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Dark Premium Footer -->
+    <footer class="main-footer">
+        <div class="container footer-grid">
+            <!-- Col 1: Branding -->
+            <div class="footer-col footer-about">
+                <div class="footer-logo">
+                    <img src="assets/images/logo.png" alt="FARMASUITS Footer Logo">
+                    <span><span class="logo-blue">FARMA</span><span class="logo-green">SUITS</span></span>
+                </div>
+                <p>Establishing clinical trust in livestock healthcare. Our GMP formulations ensure safety and boost farm profitability.</p>
+                <div class="social-links">
+                    <a href="https://facebook.com" target="_blank" aria-label="Facebook"><i class="fa-brands fa-facebook-f"></i></a>
+                    <a href="https://instagram.com" target="_blank" aria-label="Instagram"><i class="fa-brands fa-instagram"></i></a>
+                    <a href="https://linkedin.com" target="_blank" aria-label="LinkedIn"><i class="fa-brands fa-linkedin-in"></i></a>
+                    <a href="https://wa.me/923006142273" target="_blank" aria-label="WhatsApp"><i class="fa-brands fa-whatsapp"></i></a>
+                </div>
+            </div>
+
+            <!-- Col 2: Navigation Links -->
+            <div class="footer-col">
+                <h3>Quick Links</h3>
+                <ul class="footer-links">
+                    <li><a href="#home">Home</a></li>
+                    <li><a href="#about">About Legacy</a></li>
+                    <li><a href="#categories">Therapeutic Class</a></li>
+                    <li><a href="#featured">Featured Brands</a></li>
+                    <li><a href="#industries">Sectors Served</a></li>
+                    <li><a href="#gallery">GMP Gallery</a></li>
+                    <li><a href="#blog">Knowledge Base</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 3: Product Subcategories -->
+            <div class="footer-col">
+                <h3>Formulations</h3>
+                <ul class="footer-links">
+                    <li><a href="#categories" onclick="filterCategory('Antibiotics')">Antibiotic Formulations</a></li>
+                    <li><a href="#categories" onclick="filterCategory('Vaccines')">Poultry & Cattle Vaccines</a></li>
+                    <li><a href="#categories" onclick="filterCategory('Dewormers')">Broad-spectrum Dewormers</a></li>
+                    <li><a href="#categories" onclick="filterCategory('Feed Additives')">Mineral Feed Additives</a></li>
+                    <li><a href="#categories" onclick="filterCategory('Nutritional Supplements')">Cattle Liquid Minerals</a></li>
+                </ul>
+            </div>
+
+            <!-- Col 4: Newsletter -->
+            <div class="footer-col footer-newsletter">
+                <h3>Newsletter</h3>
+                <p>Subscribe to receive regulatory pharmaceutical releases, disease outbreak warnings, and vaccination updates.</p>
+                <form id="newsletterForm" class="newsletter-form">
+                    <input type="email" placeholder="email@company.com" required aria-label="Newsletter Email">
+                    <button type="submit" aria-label="Subscribe"><i class="fa-solid fa-paper-plane"></i></button>
+                </form>
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <div class="container footer-bottom-flex">
+                <p>&copy; 2026 FARMASUITS. All Rights Reserved.</p>
+                <ul class="footer-legal">
+                    <li><a href="#">Privacy Policy</a></li>
+                    <li><a href="#">Terms & Conditions</a></li>
+                    <li><a href="#">Drug Regulatory Compliance</a></li>
+                </ul>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Floating Action Buttons -->
+    <div class="floating-btn-group">
+        <!-- WhatsApp -->
+        <a href="https://wa.me/923006142273" target="_blank" class="float-btn float-whatsapp" title="Chat on WhatsApp" aria-label="WhatsApp">
+            <i class="fa-brands fa-whatsapp"></i>
+        </a>
+        <!-- Phone -->
+        <a href="tel:+923006142273" class="float-btn float-phone" title="Call Sales Office" aria-label="Call Office">
+            <i class="fa-solid fa-phone"></i>
+        </a>
+        <!-- Back to Top -->
+        <button id="backToTopBtn" class="float-btn float-top" title="Back to Top" aria-label="Back to Top">
+            <i class="fa-solid fa-arrow-up"></i>
+        </button>
+    </div>
+
+    <!-- Product Inquiry Detail Modal -->
+    <div class="modal-backdrop" id="productModal">
+        <div class="modal-card glass-card">
+            <button class="modal-close" id="modalCloseBtn" aria-label="Close modal"><i class="fa-solid fa-xmark"></i></button>
+            <div class="modal-body-content">
+                <div class="modal-split">
+                    <!-- Product Quick Preview -->
+                    <div class="modal-preview-col">
+                        <div class="modal-badge" id="modalProductBadge">Therapeutic</div>
+                        <h3 id="modalProductName">Product Name</h3>
+                        <p class="modal-dosage" id="modalProductDosage">Volume / Dosage</p>
+                        
+                        <!-- Interactive 3D CSS Card for details -->
+                        <div class="modal-img-container">
+                            <div class="pharm-box-3d detail-box float-anim" id="modalProductBox">
+                                <div class="box-face face-front">
+                                    <div class="box-brand" id="modalProductBrandText">BRAND</div>
+                                    <div class="box-volume" id="modalProductVolumeText">VOLUME</div>
+                                    <div class="box-cross"><i class="fa-solid fa-shield-cat"></i></div>
+                                </div>
+                                <div class="box-face face-top"></div>
+                                <div class="box-face face-side"></div>
+                            </div>
+                        </div>
+
+                        <div class="modal-product-details">
+                            <h4>Composition & Clinical Indicators</h4>
+                            <p id="modalProductDesc">Active pharmaceutical description.</p>
+                            
+                            <h4>Recommended Administration</h4>
+                            <p id="modalProductAdmin">Dosing details.</p>
+                        </div>
+                    </div>
+
+                    <!-- distributor inquiry Form -->
+                    <div class="modal-form-col">
+                        <h3>Distributor Inquiry</h3>
+                        <p>Fill out the form below to receive wholesale pricing, shipping lead times, and regulatory dossier support.</p>
+                        <form id="inquiryForm" class="inquiry-form">
+                            <input type="hidden" id="inquiryProductName" name="product_name">
+                            <div class="form-group">
+                                <label for="inqName">Your Name *</label>
+                                <input type="text" id="inqName" required placeholder="Alex Smith">
+                            </div>
+                            <div class="form-group">
+                                <label for="inqCompany">Company / Practice *</label>
+                                <input type="text" id="inqCompany" required placeholder="VetCare Distributors">
+                            </div>
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="inqPhone">Phone Number *</label>
+                                    <input type="tel" id="inqPhone" required placeholder="+92 ...">
+                                </div>
+                                <div class="form-group">
+                                    <label for="inqEmail">Email *</label>
+                                    <input type="email" id="inqEmail" required placeholder="alex@vetcare.com">
+                                </div>
+                            </div>
+                            <div class="form-group-row">
+                                <div class="form-group">
+                                    <label for="inqQuantity">Required Est. Volume *</label>
+                                    <select id="inqQuantity" required>
+                                        <option value="" disabled selected>Select Quantity</option>
+                                        <option value="trial">Sample / Trial Batch</option>
+                                        <option value="medium">100 - 500 Vials/Packs</option>
+                                        <option value="large">500 - 2000 Vials/Packs</option>
+                                        <option value="commercial">Container / Global Wholesale</option>
+                                    </select>
+                                </div>
+                                <div class="form-group">
+                                    <label for="inqDestination">Destination Country *</label>
+                                    <input type="text" id="inqDestination" required placeholder="Pakistan">
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label for="inqMessage">Requirements / Directives</label>
+                                <textarea id="inqMessage" rows="3" placeholder="State any custom labeling, packaging size requests, or shipping requirements..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-primary btn-block">
+                                <span>Submit Official Inquiry</span> <i class="fa-solid fa-clipboard-list"></i>
+                            </button>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Gallery Lightbox Popup -->
+    <div class="lightbox-backdrop" id="galleryLightbox">
+        <button class="lightbox-close" id="lightboxCloseBtn" aria-label="Close Lightbox"><i class="fa-solid fa-xmark"></i></button>
+        <button class="lightbox-nav lightbox-prev" id="lightboxPrevBtn" aria-label="Previous Image"><i class="fa-solid fa-chevron-left"></i></button>
+        <div class="lightbox-content">
+            <img src="" id="lightboxImg" alt="FARMASUITS Gallery Expanded">
+            <p class="lightbox-caption" id="lightboxCaption">Expanded Caption</p>
+        </div>
+        <button class="lightbox-nav lightbox-next" id="lightboxNextBtn" aria-label="Next Image"><i class="fa-solid fa-chevron-right"></i></button>
+    </div>
+
+    <!-- Simulated AI Live Chat Widget -->
+    <div class="chat-widget" id="chatWidget">
+        <!-- Floating chat icon toggle -->
+        <button class="chat-toggle-btn" id="chatToggleBtn" aria-label="Toggle Live Chat">
+            <i class="fa-solid fa-comments"></i>
+            <span class="chat-badge-dot"></span>
+        </button>
+
+        <!-- Chat Panel -->
+        <div class="chat-panel glass-card" id="chatPanel">
+            <div class="chat-header">
+                <div class="chat-header-user">
+                    <div class="chat-avatar"><i class="fa-solid fa-user-doctor"></i></div>
+                    <div>
+                        <h4>Dr. Suit-AI</h4>
+                        <span>Online | Farm Assistant</span>
+                    </div>
+                </div>
+                <button class="chat-close-btn" id="chatCloseBtn"><i class="fa-solid fa-xmark"></i></button>
+            </div>
+            <div class="chat-messages" id="chatMessages">
+                <!-- Initial messages loaded in JS -->
+            </div>
+            <form id="chatForm" class="chat-input-area">
+                <input type="text" id="chatInput" placeholder="Ask about dosages, pricing, shipping..." required autocomplete="off" aria-label="Chat Message">
+                <button type="submit" class="chat-send-btn" aria-label="Send"><i class="fa-solid fa-paper-plane"></i></button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Success Message Popup -->
+    <div class="success-popup-wrapper" id="successPopup">
+        <div class="success-popup glass-card">
+            <div class="success-icon"><i class="fa-solid fa-circle-check"></i></div>
+            <h3>Inquiry Submitted Successfully!</h3>
+            <p>Our sales desk has received your request. A veterinary representative will get back to you with the technical specifications and price sheets within 4 to 6 business hours.</p>
+            <button class="btn btn-primary btn-sm" id="successCloseBtn">Proceed</button>
+        </div>
+    </div>
+
+    <!-- Custom Script -->
+    <script src="app.js"></script>
+</body>
+</html>
